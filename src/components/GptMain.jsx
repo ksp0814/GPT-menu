@@ -69,7 +69,7 @@ const GptMain = () => {
 
         console.log(requestBody.prompt);
         try {
-            const response = await fetch("https://43.200.253.127:8080/record", {
+            const response = await fetch("https://43.200.253.127/record", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
