@@ -17,6 +17,7 @@ const GptMain = () => {
     const navigate = useNavigate();
 
     const API_KEY = import.meta.env.VITE_API_KEY; // Vite 환경 변수에서 API 키 가져오기
+    const SERVER_API_KEY = import.meta.env.VITE_SERVER_URL
 
     const getWeather = async (lat, lon) => {
         try {
@@ -69,7 +70,7 @@ const GptMain = () => {
 
         console.log(requestBody.prompt);
         try {
-            const response = await fetch("https://43.200.253.127/record", {
+            const response = await fetch(`${SERVER_API_KEY}/record`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
