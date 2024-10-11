@@ -69,7 +69,7 @@ const GptMain = () => {
 
         console.log(requestBody.prompt);
         try {
-            const response = await fetch("http://43.200.253.127:8080/record", {
+            const response = await fetch("https://43.200.253.127:8080/record", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -102,7 +102,7 @@ const GptMain = () => {
                 {errorMessage && <p className="error-message">{errorMessage}</p>}
                 <form onSubmit={handleSubmit}>
                     <div className="input-group">
-                        <label htmlFor="age">나이</label>
+                        
                         <input
                             type="number"
                             id="age"
@@ -115,7 +115,7 @@ const GptMain = () => {
                     </div>
 
                     <div className="input-group">
-                        <label>기분</label>
+                        
                         <div className="button-group">
                             {["기쁨", "슬픔", "분노", "평온", "무기력"].map((moodOption) => (
                                 <button
